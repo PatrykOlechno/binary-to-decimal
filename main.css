@@ -1,0 +1,34 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #222;
+    color: greenyellow;
+    height: 100vh;
+    overflow: hidden;
+}
+.converter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+#decimal-output{
+    font-size: 120px;
+    margin: 100px;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+}
+#decimal-output::after{
+    content: "(10)";
+    color: seagreen;
+    vertical-align: sub;
+    font-size: 30px;;
+}
+#binary {
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+}
+#binary label {
+    margin: 10px;
+    font-size: 20px;
+}
