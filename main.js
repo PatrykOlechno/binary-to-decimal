@@ -2,16 +2,17 @@
 const decimal_output = document.getElementById("decimal-output");
 const binary_input = document.getElementById("binary-input");
 const warning = document.getElementById("warning");
-const allowed_keys = [49, 48, 96, 97, 13, 8, 46];
+const allowed_keys = ['1', '0', null];
+binary_input.designMode = "on";
 
 // When to update the output and limit input to 1 & 0
-binary_input.addEventListener("keydown", event =>  {
-    if(allowed_keys.includes(event.keyCode)){
+binary_input.addEventListener("input", event =>  {
+    if(allowed_keys.includes(event.data)){
         warning.style.opacity = "0";
         binaryToDecimal();
     }else{
-        event.preventDefault();
         warning.style.opacity = "1";
+        binary_input.value = binary_input.value.substr(0, binary_input.value.length -1)
     }
 });
 
